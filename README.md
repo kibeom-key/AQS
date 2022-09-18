@@ -3,13 +3,19 @@
 - Android Studio : Chipmunk | 2021.2.1 Patch 2
     - plungin : 7.2.2
     - gradle : 7.3.3
+    - settings.gradle
+        - When a new project is created in Android Studio Bumblebee, the top-level build.gradle file contains the plugins block
+        - The repository settings that were previously in the top-level build.gradle file are now in the settings.gradle file
 
-- Clean Architecture
-    - app (presentation)
-    - data
-    - domain
 
-- MVVM
+- Recommended app architecture
+    - Clean Architecture
+        - app (presentation)
+        - data
+        - domain
+
+    - MVVM
+    - DI
 
 - Kotlin DSL (Failed to apply)
     ~~~kotlin
@@ -24,4 +30,16 @@
     Line 48:     implementation(Retrofit.base)
                               ^ Unresolved reference: Retrofit
     ~~~
+
+- How to set with purity 
+    1. Code - Download ZIP 
+    2. Open project in AndroidStudio
+    3. Rename
+        - settings.gradle : rootProject.name
+        - package
+            - compact middle packages : unchecked
+        - build.gradle(app) : applicationId
+        - string.xml : app_name
+        - theme.xml : style name
+    4. Clean projct
 
